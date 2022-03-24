@@ -8,3 +8,4 @@ settings.py
 *.pyc
 target/
 .cache
+0001_initial.py
