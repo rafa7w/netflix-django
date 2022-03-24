@@ -1,0 +1,10 @@
+__init__.py
+__pycache__/
+.env
+db.sqlite3
+settings.py
+*.log
+*.pot
+*.pyc
+target/
+.cache
