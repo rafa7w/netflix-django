@@ -24,3 +24,9 @@ Criar um super user:
 ```bash
   python manage.py createsuperuser
 ```
+
+Rodando no navegador:
+
+```bash
+  python manage.py runserver
+```
