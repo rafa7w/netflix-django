@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+HomeFilmes Hashflix 
+{% endblock %}
+
+
+{% block content %}
+<h1>Essa é a HomeFilmes</h1>
+
+{% for filme in lista_filmes %}
+  <p>{{ filme }}</p>
+{% endfor %}
+
+{% endblock %}
