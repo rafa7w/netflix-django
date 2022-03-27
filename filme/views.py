@@ -1,10 +1,9 @@
-from msilib.schema import ListView
-from re import template
-from django.shortcuts import render
 from .models import Filme
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 
 # Create your views here.
+# url -> view -> template
+
 # def homepage(req):
 #   return render(req, 'homepage.html')
 
@@ -20,4 +19,9 @@ class Homepage(TemplateView):
 class Homefilmes(ListView):
   template_name = 'homefilmes.html'
   model = Filme
-  # o que é passado para o front é um object_list
+  # o que é passado para o front é um object_list (lista de itens do modelo)
+
+class Detalhesfilme(DetailView):
+  template_name: 'detalhesfilme.html'
+  model = Filme
+  # object -> um item do nosso modelo
