@@ -9,3 +9,4 @@ settings.py
 target/
 .cache
 0001_initial.py
+0002_episodio.py
