@@ -25,3 +25,12 @@ class Detalhesfilme(DetailView):
   template_name = 'detalhesfilme.html'
   model = Filme
   # object -> um item do nosso modelo
+
+  # O context no Class Based Views já é criado automaticamente
+  def get_context_data(self, **kwargs):
+    context = super(DetailView, self).get_context_data(**kwargs)
+
+    # filtrar a tabela de filmes, cuja categoria é igual
+    filmes_relacionados = Filme.objects.filter(categoria=self.get_object().categoria)[:5]
+    context['filmes_relacionados'] = filmes_relacionados
+    return context
