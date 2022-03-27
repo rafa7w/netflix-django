@@ -22,6 +22,6 @@ class Homefilmes(ListView):
   # o que é passado para o front é um object_list (lista de itens do modelo)
 
 class Detalhesfilme(DetailView):
-  template_name: 'detalhesfilme.html'
+  template_name = 'detalhesfilme.html'
   model = Filme
   # object -> um item do nosso modelo
