@@ -26,6 +26,13 @@ class Detalhesfilme(DetailView):
   model = Filme
   # object -> um item do nosso modelo
 
+  def get(self, req, *args, **kwargs):
+    # contabilizando
+    filme = self.get_object()
+    filme.visualizacoes +=1
+    filme.save()
+    return super().get(req, *args, **kwargs) # redireciona o usuário para a url final
+
   # O context no Class Based Views já é criado automaticamente
   def get_context_data(self, **kwargs):
     context = super(DetailView, self).get_context_data(**kwargs)
