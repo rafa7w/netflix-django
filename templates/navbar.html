@@ -8,14 +8,15 @@
   </div>
   <div class="w-6/12 flex flex-nowrap justify-end">
     <div class="mr-2">
-      <form action="">
+      <form method="GET" action="{% url 'filme:pesquisafilme' %}">
         <input
           type="text"
-          name=""
-          id=""
+          value="{{ request.GET.query }}"
+          name="query"
           class="py-1 px-2 rounded-md text-black"
           placeholder="Pesquisar..."
         />
+        <input type="submit" value="" />
       </form>
     </div>
     <div class="mr-2">
